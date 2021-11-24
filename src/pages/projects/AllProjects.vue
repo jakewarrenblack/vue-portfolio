@@ -83,7 +83,7 @@ export default {
       // we use an arrow function here, but could write the filter function separately and call it inside filter()
       // only need one set of brackets on .filter() if only using one param, otherwise wrap params in soft brackets as well
       return this.projects.filter((project) => {
-        return project.title
+        return project.description
           .toLowerCase()
           .includes(this.searchTerm.toLowerCase());
       });
