@@ -20,7 +20,7 @@
     "tags": ["Vue", "Axios"],
     "images": ["vue_logo.png"],
     "date": "2021",
-    "demo": "",
+    "demo": "vue-giph",
     "links": {
       "github": "https://github.com/jakewarrenblack/vue-todo"
     }
