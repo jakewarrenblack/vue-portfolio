@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "VueDo",
-    "description": "My first todo app using Vue.js",
+    "description": "Todo list app made in Vue.js as part of the IADT CCY3 frontend frameworks module. ",
     "website": "",
     "tags": ["Vue"],
     "images": ["vue_logo.png"],
@@ -14,67 +14,67 @@
   },
   {
     "id": 2,
-    "title": "Vue giph",
-    "description": "My cool giphy vue app",
+    "title": "Vue-Giph",
+    "description": "Connecting to the Giphy API to provide a frontend offering search, random, and trending gifs.",
     "website": "",
     "tags": ["Vue", "Axios"],
     "images": ["vue_logo.png"],
     "date": "2021",
     "demo": "vue-giph",
     "links": {
-      "github": "https://github.com/jakewarrenblack/vue-todo"
+      "github": "https://github.com/jakewarrenblack/vue-giph"
     }
   },
   {
     "id": 3,
-    "title": "Festivals app",
-    "description": "My cool festivals app using Vue.js",
+    "title": "PHP Shopping Site",
+    "description": "PHP Shopping Cart Application with CRUD, Search/Sort functionality, basket functionality, related products, email with PHPMailer, and Stripe-integrated checkout functionality.",
     "website": "",
-    "tags": ["Vue"],
-    "images": ["vue_logo.png"],
+    "tags": ["PHP", "MySQL", "Stripe"],
+    "images": ["php-mysql.png"],
     "date": "2021",
-    "demo": "vue-do",
+    "demo": "",
     "links": {
-      "github": "https://github.com/jakewarrenblack/vue-todo"
+      "github": "https://github.com/jakewarrenblack/php-shopping-site"
     }
   },
   {
     "id": 4,
-    "title": "Rest countries",
-    "description": "My first todo app using Vue.js",
+    "title": "P5 Ball Game",
+    "description": "A simple HTML5 game made with p5.js, mobile version including movement using accelerometer",
     "website": "",
-    "tags": ["Vue"],
-    "images": ["vue_logo.png"],
+    "tags": ["p5"],
+    "images": ["p5.png"],
     "date": "2021",
-    "demo": "vue-do",
+    "demo": "",
     "links": {
-      "github": "https://github.com/jakewarrenblack/vue-todo"
+      "github": "https://github.com/jakewarrenblack/p5.js-ball-game"
     }
   },
   {
     "id": 5,
-    "title": "Sample project",
-    "description": "My first todo app using Vue.js",
+    "title": "Flutter Cocktail Search",
+    "description": "Simple Flutter/Dart application which makes use of the cocktaildb API to allow the user to search for any cocktail ingredient (eg vodka, rum) and view a list of possible cocktails.",
     "website": "",
-    "tags": ["Vue"],
-    "images": ["vue_logo.png"],
+    "tags": ["Flutter"],
+    "images": ["flutter_logo.png"],
     "date": "2021",
-    "demo": "vue-do",
+    "demo": "",
     "links": {
-      "github": "https://github.com/jakewarrenblack/vue-todo"
+      "github": "https://github.com/jakewarrenblack/flutter-cocktail-search"
     }
   },
   {
     "id": 6,
-    "title": "Sample project 2",
-    "description": "My first todo app using Vue.js",
+    "title": "Android Cocktail Search",
+    "description": "Written in kotlin and designed to MVVM architecture. API calls using Retrofit and persistent local SQLite database using Room. Image loading with Glide/Picasso. Search for a cocktail for a list of possibilities.",
     "website": "",
-    "tags": ["Vue"],
-    "images": ["vue_logo.png"],
+    "tags": ["Android", "Kotlin"],
+    "images": ["kotlin_logo.png"],
     "date": "2021",
-    "demo": "vue-do",
+    "demo": "",
     "links": {
-      "github": "https://github.com/jakewarrenblack/vue-todo"
+      "github": "https://github.com/jakewarrenblack/Mobile_Development_CA1"
     }
   }
 ]

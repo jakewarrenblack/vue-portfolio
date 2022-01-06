@@ -96,11 +96,16 @@
               <b-card-text>
                 {{ project.description }}
               </b-card-text>
-              <router-link :to="{ name: project.demo }">
-                <b-button href="#" variant="primary"
-                  >View demo</b-button
-                ></router-link
-              >
+              <b-row class="mx-auto">
+                <router-link v-if="project.demo" :to="{ name: project.demo }">
+                  <b-button href="#" variant="primary"
+                    >View demo</b-button
+                  ></router-link
+                >
+                <a :href="project.links.github"
+                  ><b-button href="#" variant="primary">Github</b-button></a
+                >
+              </b-row>
             </b-card>
           </slide>
         </carousel>
@@ -210,8 +215,8 @@ export default {
 }
 
 .carousel_img {
-  max-height: 20rem;
-  object-fit: cover;
+  max-height: 12rem;
+  object-fit: contain;
 }
 
 .card {
@@ -221,10 +226,17 @@ export default {
   font-size: 1.5rem;
   color: white;
   font-family: "Lato", sans-serif;
+  height: 42rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .card-title {
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 1rem;
   font-weight: 700;
 }
@@ -714,6 +726,8 @@ button:hover {
 
 /* Smartphones (portrait and landscape) ----------- */
 @media all and (max-width: 800px) {
+  /* Carousel cards */
+
   .projects-row {
     flex-direction: column !important;
   }
