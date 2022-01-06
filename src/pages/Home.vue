@@ -104,7 +104,11 @@
                     <b-card-text>
                       {{ project.description }}
                     </b-card-text>
-                    <b-button href="#" variant="primary">View demo</b-button>
+                    <router-link :to="{ name: project.demo }">
+                      <b-button href="#" variant="primary"
+                        >View demo</b-button
+                      ></router-link
+                    >
                   </b-card>
                 </slide>
               </carousel>
@@ -140,6 +144,22 @@ export default {
   components: { carousel: Carousel, slide: Slide },
   mounted() {
     this.getAllProjects();
+    const curtain = document.getElementById("curtain");
+    const email = document.getElementById("email");
+    const close = document.getElementById("close");
+    const body = document.getElementById("body");
+
+    email.addEventListener("click", function () {
+      // curtain.classList.add('translate0');
+      curtain.style.transform = "translateY(0%)";
+      body.classList.add("overflow-hidden");
+    });
+
+    close.addEventListener("click", function () {
+      // curtain.classList.remove('translate0');
+      curtain.style.transform = "translateY(100%)";
+      body.classList.remove("overflow-hidden");
+    });
   },
   data() {
     return {
