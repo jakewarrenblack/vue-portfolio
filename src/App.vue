@@ -16,3 +16,13 @@ export default {
   },
 };
 </script>
+<style>
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/fonts/lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("./assets/fonts/poppins/Poppins-Bold.ttf");
+}
+</style>

@@ -80,43 +80,78 @@
         </div>
       </div>
       <div class="projects">
-        <h1 class="projects-title">Projects</h1>
-        <b-row>
-          <div class="col-12">
-            <b-field label="Search Projects">
-              <b-input v-model="searchTerm" />
-            </b-field>
-          </div>
-          <div>
-            <div>
-              <b-carousel
-                id="carousel-1"
-                v-model="slide"
-                :interval="4000"
-                controls
-                indicators
-                background="#ababab"
-                img-width="1024"
-                img-height="480"
-                style="text-shadow: 1px 1px 2px #333"
-                @sliding-start="onSlideStart()"
-                @sliding-end="onSlideEnd()"
-              >
-                <!-- Slides with img slot -->
-                <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-                <b-carousel-slide
-                  caption="First slide"
-                  img-src="https://picsum.photos/1024/480/?image=10"
-                ></b-carousel-slide>
-              </b-carousel>
-            </div>
+        <h1 class="projects-title z-index-100">Projects</h1>
+        <b-container>
+          <b-row>
+            <b-col cols="12">
+              <carousel :perPage="3" class="z-index-100">
+                <slide class="p-2">
+                  <b-card
+                    title="Card Title 1"
+                    img-src="https://picsum.photos/600/300/?image=25"
+                    img-alt="Image"
+                    img-top
+                    tag="article"
+                  >
+                    <b-card-text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </b-card-text>
+                    <b-button href="#" variant="primary">Go somewhere</b-button>
+                  </b-card>
+                </slide>
+                <slide class="p-2">
+                  <b-card
+                    title="Card Title 2"
+                    img-src="https://picsum.photos/600/300/?image=25"
+                    img-alt="Image"
+                    img-top
+                    tag="article"
+                  >
+                    <b-card-text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </b-card-text>
 
-            <p class="mt-4">
-              Slide #: {{ slide }}<br />
-              Sliding: {{ sliding }}
-            </p>
-          </div>
-        </b-row>
+                    <b-button href="#" variant="primary">Go somewhere</b-button>
+                  </b-card>
+                </slide>
+                <slide class="p-2">
+                  <b-card
+                    title="Card Title 3"
+                    img-src="https://picsum.photos/600/300/?image=25"
+                    img-alt="Image"
+                    img-top
+                    tag="article"
+                  >
+                    <b-card-text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </b-card-text>
+
+                    <b-button href="#" variant="primary">Go somewhere</b-button>
+                  </b-card>
+                </slide>
+                <slide class="p-2">
+                  <b-card
+                    title="Card Title 4"
+                    img-src="https://picsum.photos/600/300/?image=25"
+                    img-alt="Image"
+                    img-top
+                    tag="article"
+                  >
+                    <b-card-text>
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </b-card-text>
+
+                    <b-button href="#" variant="primary">Go somewhere</b-button>
+                  </b-card>
+                </slide>
+              </carousel>
+            </b-col>
+          </b-row>
+        </b-container>
       </div>
       <div class="skills">
         <h1 class="projects-title">Skills</h1>
@@ -140,19 +175,20 @@
 </template>
 
 <script>
+import { Carousel, Slide } from "vue-carousel";
 export default {
   name: "Home",
-  components: {},
+  components: { carousel: Carousel, slide: Slide },
   mounted() {
     this.getAllProjects();
   },
   data() {
     return {
-      slide: 0,
-      sliding: null,
       test: 0,
       projects: [],
       searchTerm: "",
+      slide: 0,
+      sliding: null,
     };
   },
   // computed functions will run every time a given variable changes
@@ -197,6 +233,10 @@ export default {
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
   text-align: center;
+}
+
+.z-index-100 {
+  z-index: 100;
 }
 
 .curtain {
@@ -397,17 +437,6 @@ body {
 
 .contact-link:hover {
   color: #2a9d8f;
-}
-
-:root {
-  --step--2: clamp(0.91rem, 0.89rem + 0.1vw, 0.96rem);
-  --step--1: clamp(1.09rem, 1.05rem + 0.21vw, 1.2rem);
-  --step-0: clamp(1.31rem, 1.24rem + 0.37vw, 1.5rem);
-  --step-1: clamp(1.58rem, 1.46rem + 0.59vw, 1.88rem);
-  --step-2: clamp(1.89rem, 1.71rem + 0.89vw, 2.34rem);
-  --step-3: clamp(2.27rem, 2.01rem + 1.29vw, 2.93rem);
-  --step-4: clamp(2.72rem, 2.36rem + 1.83vw, 3.66rem);
-  --step-5: clamp(3.27rem, 2.75rem + 2.56vw, 4.58rem);
 }
 
 .landing-background {
