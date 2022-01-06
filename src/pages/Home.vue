@@ -85,67 +85,26 @@
           <b-row>
             <b-col cols="12">
               <carousel :perPage="3" class="z-index-100">
-                <slide class="p-2">
+                <slide
+                  class="p-2"
+                  v-for="project in projects"
+                  :key="project.id"
+                >
                   <b-card
-                    title="Card Title 1"
-                    img-src="https://picsum.photos/600/300/?image=25"
+                    :title="`${project.title}`"
+                    :img-src="`${
+                      project.images[0]
+                        ? project.images[0]
+                        : 'https://picsum.photos/600/300/?image=25'
+                    }`"
                     img-alt="Image"
                     img-top
                     tag="article"
                   >
                     <b-card-text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
+                      {{ project.description }}
                     </b-card-text>
-                    <b-button href="#" variant="primary">Go somewhere</b-button>
-                  </b-card>
-                </slide>
-                <slide class="p-2">
-                  <b-card
-                    title="Card Title 2"
-                    img-src="https://picsum.photos/600/300/?image=25"
-                    img-alt="Image"
-                    img-top
-                    tag="article"
-                  >
-                    <b-card-text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </b-card-text>
-
-                    <b-button href="#" variant="primary">Go somewhere</b-button>
-                  </b-card>
-                </slide>
-                <slide class="p-2">
-                  <b-card
-                    title="Card Title 3"
-                    img-src="https://picsum.photos/600/300/?image=25"
-                    img-alt="Image"
-                    img-top
-                    tag="article"
-                  >
-                    <b-card-text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </b-card-text>
-
-                    <b-button href="#" variant="primary">Go somewhere</b-button>
-                  </b-card>
-                </slide>
-                <slide class="p-2">
-                  <b-card
-                    title="Card Title 4"
-                    img-src="https://picsum.photos/600/300/?image=25"
-                    img-alt="Image"
-                    img-top
-                    tag="article"
-                  >
-                    <b-card-text>
-                      Some quick example text to build on the card title and
-                      make up the bulk of the card's content.
-                    </b-card-text>
-
-                    <b-button href="#" variant="primary">Go somewhere</b-button>
+                    <b-button href="#" variant="primary">View demo</b-button>
                   </b-card>
                 </slide>
               </carousel>
@@ -233,6 +192,12 @@ export default {
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
   text-align: center;
+}
+
+.VueCarousel-slide {
+  visibility: visible;
+  flex-basis: 33.3%;
+  /* width: 33.3%; */
 }
 
 .z-index-100 {
@@ -584,7 +549,7 @@ p {
 .card-face {
   height: 100%;
   width: 100%;
-  backface-visibility: hidden;
+  /* backface-visibility: hidden; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
