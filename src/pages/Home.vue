@@ -58,7 +58,10 @@
               >IADT,</a
             >
             <br />
-            freelance frontend web developer.
+            developer at
+            <a class="teal" target="_blank" href="https://www.web-space.design"
+              >WebSpace</a
+            >.
           </h3>
           <div class="contact-links">
             <a
@@ -81,40 +84,26 @@
       </div>
       <div class="projects">
         <h1 class="projects-title z-index-100">Projects</h1>
-        <b-container>
-          <b-row>
-            <b-col cols="12">
-              <carousel :perPage="3" class="z-index-100">
-                <slide
-                  class="p-2"
-                  v-for="project in projects"
-                  :key="project.id"
-                >
-                  <b-card
-                    :title="`${project.title}`"
-                    :img-src="`${
-                      project.images[0]
-                        ? project.images[0]
-                        : 'https://picsum.photos/600/300/?image=25'
-                    }`"
-                    img-alt="Image"
-                    img-top
-                    tag="article"
-                  >
-                    <b-card-text>
-                      {{ project.description }}
-                    </b-card-text>
-                    <router-link :to="{ name: project.demo }">
-                      <b-button href="#" variant="primary"
-                        >View demo</b-button
-                      ></router-link
-                    >
-                  </b-card>
-                </slide>
-              </carousel>
-            </b-col>
-          </b-row>
-        </b-container>
+
+        <carousel :scrollPerPage="false" :perPage="3" class="z-index-100">
+          <slide class="p-2" v-for="project in projects" :key="project.id">
+            <b-card :title="`${project.title}`" tag="article">
+              <img
+                class="carousel_img"
+                v-if="`${project.images[0]}`"
+                :src="require(`@/assets/images/${project.images[0]}`)"
+              />
+              <b-card-text>
+                {{ project.description }}
+              </b-card-text>
+              <router-link :to="{ name: project.demo }">
+                <b-button href="#" variant="primary"
+                  >View demo</b-button
+                ></router-link
+              >
+            </b-card>
+          </slide>
+        </carousel>
       </div>
       <div class="skills">
         <h1 class="projects-title">Skills</h1>
@@ -220,8 +209,40 @@ export default {
   /* width: 33.3%; */
 }
 
+.carousel_img {
+  max-height: 20rem;
+  object-fit: cover;
+}
+
+.card {
+  background: transparent !important;
+  border: 0.5rem solid #2a9d8f;
+  border-radius: 2.5rem;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.card-title {
+  font-size: 2.5rem;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.card-text {
+  padding: 2rem 0;
+}
+
+.teal {
+  color: #2a9d8f;
+}
+
 .z-index-100 {
   z-index: 100;
+}
+
+.VueCarousel {
+  margin: 0 8rem;
 }
 
 .curtain {

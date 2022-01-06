@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="top">
     <b-container>
       <b-row>
         <b-col>
@@ -24,5 +24,13 @@ export default {
 <style>
 .container {
   margin-top: 30px;
+}
+body,
+html {
+  background-color: #0a1224 !important;
+}
+.top {
+  width: 100%;
+  margin-top: 10rem;
 }
 </style>

@@ -5,9 +5,7 @@
     "description": "My first todo app using Vue.js",
     "website": "",
     "tags": ["Vue"],
-    "images": [
-      "https://user-images.githubusercontent.com/47800618/135927625-11e5c3ea-ec51-4e0e-bd90-90ee8b1102ca.gif"
-    ],
+    "images": ["vue_logo.png"],
     "date": "2021",
     "demo": "vue-do",
     "links": {
@@ -20,9 +18,7 @@
     "description": "My cool giphy vue app",
     "website": "",
     "tags": ["Vue", "Axios"],
-    "images": [
-      "https://user-images.githubusercontent.com/47800618/135927625-11e5c3ea-ec51-4e0e-bd90-90ee8b1102ca.gif"
-    ],
+    "images": ["vue_logo.png"],
     "date": "2021",
     "demo": "",
     "links": {
@@ -35,9 +31,7 @@
     "description": "My cool festivals app using Vue.js",
     "website": "",
     "tags": ["Vue"],
-    "images": [
-      "https://user-images.githubusercontent.com/47800618/135927625-11e5c3ea-ec51-4e0e-bd90-90ee8b1102ca.gif"
-    ],
+    "images": ["vue_logo.png"],
     "date": "2021",
     "demo": "vue-do",
     "links": {
@@ -50,9 +44,7 @@
     "description": "My first todo app using Vue.js",
     "website": "",
     "tags": ["Vue"],
-    "images": [
-      "https://user-images.githubusercontent.com/47800618/135927625-11e5c3ea-ec51-4e0e-bd90-90ee8b1102ca.gif"
-    ],
+    "images": ["vue_logo.png"],
     "date": "2021",
     "demo": "vue-do",
     "links": {
@@ -65,9 +57,7 @@
     "description": "My first todo app using Vue.js",
     "website": "",
     "tags": ["Vue"],
-    "images": [
-      "https://user-images.githubusercontent.com/47800618/135927625-11e5c3ea-ec51-4e0e-bd90-90ee8b1102ca.gif"
-    ],
+    "images": ["vue_logo.png"],
     "date": "2021",
     "demo": "vue-do",
     "links": {
@@ -80,9 +70,7 @@
     "description": "My first todo app using Vue.js",
     "website": "",
     "tags": ["Vue"],
-    "images": [
-      "https://user-images.githubusercontent.com/47800618/135927625-11e5c3ea-ec51-4e0e-bd90-90ee8b1102ca.gif"
-    ],
+    "images": ["vue_logo.png"],
     "date": "2021",
     "demo": "vue-do",
     "links": {

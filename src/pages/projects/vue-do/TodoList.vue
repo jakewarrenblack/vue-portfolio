@@ -111,4 +111,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.card-header {
+  border-bottom: 2px solid lightgray;
+}
+</style>
