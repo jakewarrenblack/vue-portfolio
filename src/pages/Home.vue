@@ -208,6 +208,10 @@ export default {
   text-align: center;
 }
 
+.VueCarousel {
+  width: 100%;
+}
+
 .VueCarousel-slide {
   visibility: visible;
   flex-basis: 33.3%;

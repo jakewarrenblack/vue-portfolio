@@ -18,7 +18,7 @@
     "description": "Connecting to the Giphy API to provide a frontend offering search, random, and trending gifs.",
     "website": "",
     "tags": ["Vue", "Axios"],
-    "images": ["vue_logo.png"],
+    "images": ["giphy.png"],
     "date": "2021",
     "demo": "vue-giph",
     "links": {
@@ -75,6 +75,32 @@
     "demo": "",
     "links": {
       "github": "https://github.com/jakewarrenblack/Mobile_Development_CA1"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Vue Countries",
+    "description": "Vue application connecting to countries, events, news, food, maps, time, and placename APIs to provide detailed information on the countries of the world.",
+    "website": "",
+    "tags": ["Vue", "Axios"],
+    "images": ["earth.png"],
+    "date": "2021",
+    "demo": "",
+    "links": {
+      "github": "https://github.com/jakewarrenblack/vue-countries"
+    }
+  },
+  {
+    "id": 8,
+    "title": "Vue Courses",
+    "description": "Vue CRUD application allowing users to view and manipulate data about courses, lecturers and enrolments at a college. Authentication and data access is provided by a REST API. Application also incorporates Vuex for state management and the Vuetify design framework.",
+    "website": "",
+    "tags": ["Vue", "Axios"],
+    "images": ["college_cap.png"],
+    "date": "2021",
+    "demo": "",
+    "links": {
+      "github": "https://github.com/jakewarrenblack/vue-courses"
     }
   }
 ]
