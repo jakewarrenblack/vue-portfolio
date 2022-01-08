@@ -85,7 +85,7 @@
       <div class="projects">
         <h1 class="projects-title z-index-100">Projects</h1>
 
-        <carousel :scrollPerPage="false" :perPage="3" class="z-index-100">
+        <!-- <carousel :scrollPerPage="false" :perPage="3" class="z-index-100">
           <slide class="p-2" v-for="project in projects" :key="project.id">
             <b-card :title="`${project.title}`" tag="article">
               <img
@@ -108,7 +108,69 @@
               </b-row>
             </b-card>
           </slide>
-        </carousel>
+        </carousel> -->
+        <!-- <div class="glider">
+          <div v-for="project in projects" :key="project.id">
+            <b-card :title="`${project.title}`" tag="article">
+              <img
+                class="carousel_img"
+                v-if="`${project.images[0]}`"
+                :src="require(`@/assets/images/${project.images[0]}`)"
+              />
+              <b-card-text>
+                {{ project.description }}
+              </b-card-text>
+              <b-row class="mx-auto">
+                <router-link v-if="project.demo" :to="{ name: project.demo }">
+                  <b-button href="#" variant="primary"
+                    >View demo</b-button
+                  ></router-link
+                >
+                <a :href="project.links.github"
+                  ><b-button href="#" variant="primary">Github</b-button></a
+                >
+              </b-row>
+            </b-card>
+          </div>
+        </div> -->
+        <b-carousel-list
+          class="z-index-100"
+          v-model="test"
+          :data="projects"
+          v-bind="al"
+        >
+          <template #item="project">
+            <div class="card">
+              <img
+                class="carousel_img"
+                v-if="`${project.images[0]}`"
+                :src="require(`@/assets/images/${project.images[0]}`)"
+              />
+              <b-card-text>
+                {{ project.description }}
+              </b-card-text>
+              <b-row class="mx-auto">
+                <router-link v-if="project.demo" :to="{ name: project.demo }">
+                  <b-button href="#" variant="primary"
+                    >View demo</b-button
+                  ></router-link
+                >
+                <a :href="project.links.github"
+                  ><b-button href="#" variant="primary">Github</b-button></a
+                >
+              </b-row>
+              <div class="card-content">
+                <div class="content">
+                  <div class="row mx-auto">
+                    <b-field v-for="tag in project.tags" :key="tag">
+                      <b-tag rounded>{{ tag }}</b-tag>
+                    </b-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </b-carousel-list>
       </div>
       <div class="skills">
         <h1 class="projects-title">Skills</h1>
@@ -132,10 +194,9 @@
 </template>
 
 <script>
-import { Carousel, Slide } from "vue-carousel";
 export default {
   name: "Home",
-  components: { carousel: Carousel, slide: Slide },
+  components: {},
   mounted() {
     this.getAllProjects();
     const curtain = document.getElementById("curtain");
@@ -157,11 +218,31 @@ export default {
   },
   data() {
     return {
+      arrow: true,
+      arrowHover: true,
+      drag: true,
+      gray: false,
+      opacity: false,
+      values: 1,
+      perList: 4,
+      increment: 1,
+      repeat: false,
       test: 0,
       projects: [],
       searchTerm: "",
       slide: 0,
       sliding: null,
+      al: {
+        itemsToShow: 1,
+        breakpoints: {
+          768: {
+            itemsToShow: 3,
+          },
+          960: {
+            itemsToShow: 3,
+          },
+        },
+      },
     };
   },
   // computed functions will run every time a given variable changes
@@ -219,7 +300,7 @@ export default {
 }
 
 .carousel_img {
-  max-height: 12rem;
+  max-height: 15rem;
   object-fit: contain;
 }
 
@@ -231,6 +312,11 @@ export default {
   color: white;
   font-family: "Lato", sans-serif;
   height: 42rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1.5rem;
 }
 
 .card-body {
@@ -239,13 +325,13 @@ export default {
   justify-content: space-around;
 }
 
-.card-title {
-  font-size: 2rem;
-  padding: 1rem;
-  font-weight: 700;
+.title {
+  font-size: 2rem !important;
+  padding: 1rem !important;
+  font-weight: 700 !important;
 }
 
-.card-text {
+.subtitle {
   padding: 2rem 0;
 }
 
