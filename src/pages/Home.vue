@@ -133,8 +133,10 @@
             </b-card>
           </div>
         </div> -->
-        <b-carousel-list :arrow="
-        false"
+        <b-carousel-list 
+        :progress="progress"
+        :arrow-hover="false"
+            :progress-type="progressType"
           class="z-index-100"
           v-model="test"
           :data="projects"
@@ -217,19 +219,36 @@ export default {
       curtain.style.transform = "translateY(100%)";
       body.classList.remove("overflow-hidden");
     });
+
+    var arrows = document.querySelectorAll('.icon')
+
+    arrows.forEach(function(arrow){
+      arrow.style.background = 'transparent'
+      arrow.style.border = 'none'
+      arrow.style.transform = 'scale(2)'
+      arrow.style.opacity = 0.75
+    })
+
+
   },
   data() {
     return {
       test: 0,
       projects: [],
       al: {
+                    progress: true,
+            progressType: 'is-primary',
+            
         itemsToShow: 1,
+        iconSize: 'is-medium',
         breakpoints: {
           768: {
             itemsToShow: 3,
+            iconSize: 'is-large',
           },
           960: {
             itemsToShow: 3,
+            iconSize: 'is-large',
           },
         },
       },
@@ -275,6 +294,16 @@ export default {
 
 .VueCarousel {
   width: 100%;
+}
+
+/* .carousel-arrow .icon{
+  padding: 1.5rem!important;
+  background: transparent!important;
+  border: none!important;
+} */
+
+.mdi-chevron{
+  transform:scale(2)
 }
 
 .card-title{
@@ -335,8 +364,8 @@ margin: 1rem;
   font-weight: 700 !important;
 }
 
-.subtitle {
-  padding: 2rem 0;
+.card-text {
+  padding: 0 2rem;;
 }
 
 .teal {
