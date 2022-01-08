@@ -133,7 +133,8 @@
             </b-card>
           </div>
         </div> -->
-        <b-carousel-list
+        <b-carousel-list :arrow="
+        false"
           class="z-index-100"
           v-model="test"
           :data="projects"
@@ -141,6 +142,7 @@
         >
           <template #item="project">
             <div class="card">
+              <b-card-title>{{ project.title}}</b-card-title>
               <img
                 class="carousel_img"
                 v-if="`${project.images[0]}`"
@@ -218,8 +220,8 @@ export default {
   },
   data() {
     return {
-      arrow: true,
-      arrowHover: true,
+      arrow: false,
+      arrowHover: false,
       drag: true,
       gray: false,
       opacity: false,
@@ -293,6 +295,12 @@ export default {
   width: 100%;
 }
 
+.card-title{
+  font-size: 3rem;
+font-weight: 700;
+font-family: 'Poppins';
+}
+
 .VueCarousel-slide {
   visibility: visible;
   flex-basis: 33.3%;
@@ -304,6 +312,10 @@ export default {
   object-fit: contain;
 }
 
+.caousel-arrow{
+  display: none!important;
+}
+
 .card {
   background: transparent !important;
   border: 0.5rem solid #2a9d8f;
@@ -311,12 +323,22 @@ export default {
   font-size: 1.5rem;
   color: white;
   font-family: "Lato", sans-serif;
-  height: 42rem;
+  height: 50rem;
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 1.5rem;
+  align-items:center;
+  margin:1rem;
+}
+
+.tag{
+ padding: 1.5rem;
+font-size: 1.2rem;
+font-family: 'Lato';
+font-weight: 700;
+margin: 1rem;
 }
 
 .card-body {
@@ -820,6 +842,11 @@ button:hover {
 
   .projects-row {
     flex-direction: column !important;
+  }
+
+  .card{
+    margin:0;
+    margin-right:1rem;
   }
 
   .project-card {
