@@ -220,20 +220,8 @@ export default {
   },
   data() {
     return {
-      arrow: false,
-      arrowHover: false,
-      drag: true,
-      gray: false,
-      opacity: false,
-      values: 1,
-      perList: 4,
-      increment: 1,
-      repeat: false,
       test: 0,
       projects: [],
-      searchTerm: "",
-      slide: 0,
-      sliding: null,
       al: {
         itemsToShow: 1,
         breakpoints: {
@@ -261,12 +249,6 @@ export default {
     },
   },
   methods: {
-    onSlideStart() {
-      this.sliding = true;
-    },
-    onSlideEnd() {
-      this.sliding = false;
-    },
     getAllProjects() {
       fetch("data/projects.json")
         // first .then() converts json to javascript object
