@@ -844,9 +844,14 @@ button:hover {
     flex-direction: column !important;
   }
 
+.card-title{
+  font-size: 2rem;
+}
   .card{
     margin:0;
     margin-right:1rem;
+    min-height:50rem;
+    height:unset;
   }
 
   .project-card {
