@@ -243,13 +243,16 @@ export default {
         iconSize: 'is-medium',
         breakpoints: {
           768: {
-            itemsToShow: 3,
+            itemsToShow: 2,
             iconSize: 'is-large',
           },
           960: {
-            itemsToShow: 3,
+            itemsToShow: 2,
             iconSize: 'is-large',
           },
+          1024:{
+            itemsToShow: 3,
+          }
         },
       },
     };
@@ -846,6 +849,8 @@ button:hover {
 .head-contain {
   height: 12%;
 }
+
+
 
 /* Smartphones (portrait and landscape) ----------- */
 @media all and (max-width: 800px) {
