@@ -1,4 +1,5 @@
 # vue-portfolio
+![vuesite](https://user-images.githubusercontent.com/47800618/148665238-dd2175dc-5c74-4808-ad62-d40192c9e508.gif)
 
 ## Project setup
 ```
