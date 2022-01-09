@@ -297,6 +297,14 @@ export default {
   width: 100%;
 }
 
+.card-content{
+  padding:0;
+}
+
+.card{
+  padding:0;
+}
+
 .carousel-slide{
   display:flex!important;
 }

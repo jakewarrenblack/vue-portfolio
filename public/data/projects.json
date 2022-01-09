@@ -30,7 +30,7 @@
     "title": "PHP Shopping Site",
     "description": "Shopping Cart Application with CRUD, Search/Sort, basket, related products, email with PHPMailer, and Stripe-integrated checkout.",
     "website": "",
-    "tags": ["PHP", "MySQL", "Stripe"],
+    "tags": ["PHP", "MySQL"],
     "images": ["php-mysql.png"],
     "date": "2021",
     "demo": "",
