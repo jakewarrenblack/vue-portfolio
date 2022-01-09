@@ -297,6 +297,10 @@ export default {
   width: 100%;
 }
 
+.carousel-slide{
+  display:flex!important;
+}
+
 /* .carousel-arrow .icon{
   padding: 1.5rem!important;
   background: transparent!important;
@@ -328,6 +332,10 @@ export default {
   display: none !important;
 }
 
+.carousel-list{
+  overflow:visible!important;
+}
+
 .card {
   background: transparent !important;
   border: 0.5rem solid #2a9d8f;
@@ -335,7 +343,8 @@ export default {
   font-size: 1.5rem;
   color: white;
   font-family: "Lato", sans-serif;
-  min-height: 50rem;
+  /* min-height: 50rem; */
+  height:100%;
 
   display: flex;
   flex-direction: column;
