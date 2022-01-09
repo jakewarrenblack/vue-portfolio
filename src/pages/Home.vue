@@ -133,10 +133,10 @@
             </b-card>
           </div>
         </div> -->
-        <b-carousel-list 
-        :progress="progress"
-        :arrow-hover="false"
-            :progress-type="progressType"
+        <b-carousel-list
+          :progress="progress"
+          :arrow-hover="false"
+          :progress-type="progressType"
           class="z-index-100"
           v-model="test"
           :data="projects"
@@ -144,7 +144,7 @@
         >
           <template #item="project">
             <div class="card">
-              <b-card-title>{{ project.title}}</b-card-title>
+              <b-card-title>{{ project.title }}</b-card-title>
               <img
                 class="carousel_img"
                 v-if="`${project.images[0]}`"
@@ -220,39 +220,37 @@ export default {
       body.classList.remove("overflow-hidden");
     });
 
-    var arrows = document.querySelectorAll('.icon')
+    var arrows = document.querySelectorAll(".icon");
 
-    arrows.forEach(function(arrow){
-      arrow.style.background = 'transparent'
-      arrow.style.border = 'none'
-      arrow.style.transform = 'scale(2)'
-      arrow.style.opacity = 0.75
-    })
-
-
+    arrows.forEach(function (arrow) {
+      arrow.style.background = "transparent";
+      arrow.style.border = "none";
+      arrow.style.transform = "scale(2)";
+      arrow.style.opacity = 0.75;
+    });
   },
   data() {
     return {
       test: 0,
       projects: [],
       al: {
-                    progress: true,
-            progressType: 'is-primary',
-            
+        progress: true,
+        progressType: "is-primary",
+
         itemsToShow: 1,
-        iconSize: 'is-medium',
+        iconSize: "is-medium",
         breakpoints: {
           768: {
             itemsToShow: 2,
-            iconSize: 'is-large',
+            iconSize: "is-large",
           },
           960: {
             itemsToShow: 2,
-            iconSize: 'is-large',
+            iconSize: "is-large",
           },
-          1024:{
+          1024: {
             itemsToShow: 3,
-          }
+          },
         },
       },
     };
@@ -305,14 +303,14 @@ export default {
   border: none!important;
 } */
 
-.mdi-chevron{
-  transform:scale(2)
+.mdi-chevron {
+  transform: scale(2);
 }
 
-.card-title{
+.card-title {
   font-size: 3rem;
-font-weight: 700;
-font-family: 'Poppins';
+  font-weight: 700;
+  font-family: "Poppins";
 }
 
 .VueCarousel-slide {
@@ -326,8 +324,8 @@ font-family: 'Poppins';
   object-fit: contain;
 }
 
-.caousel-arrow{
-  display: none!important;
+.caousel-arrow {
+  display: none !important;
 }
 
 .card {
@@ -337,22 +335,22 @@ font-family: 'Poppins';
   font-size: 1.5rem;
   color: white;
   font-family: "Lato", sans-serif;
-  height: 50rem;
+  min-height: 50rem;
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 1.5rem;
-  align-items:center;
-  margin:1rem;
+  align-items: center;
+  margin: 1rem;
 }
 
-.tag{
- padding: 1.5rem;
-font-size: 1.2rem;
-font-family: 'Lato';
-font-weight: 700;
-margin: 1rem;
+.tag {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-family: "Lato";
+  font-weight: 700;
+  margin: 1rem;
 }
 
 .card-body {
@@ -368,7 +366,7 @@ margin: 1rem;
 }
 
 .card-text {
-  padding: 0 2rem;;
+  padding: 0 2rem;
 }
 
 .teal {
@@ -850,8 +848,6 @@ button:hover {
   height: 12%;
 }
 
-
-
 /* Smartphones (portrait and landscape) ----------- */
 @media all and (max-width: 800px) {
   /* Carousel cards */
@@ -860,14 +856,14 @@ button:hover {
     flex-direction: column !important;
   }
 
-.card-title{
-  font-size: 2rem;
-}
-  .card{
-    margin:0;
-    margin-right:1rem;
-    min-height:50rem;
-    height:unset;
+  .card-title {
+    font-size: 2rem;
+  }
+  .card {
+    margin: 0;
+    margin-right: 1rem;
+    min-height: 50rem;
+    height: unset;
   }
 
   .project-card {
