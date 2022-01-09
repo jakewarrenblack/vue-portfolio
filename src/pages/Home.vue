@@ -312,7 +312,7 @@ export default {
 }
 
 .card-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   font-family: "Poppins";
 }
@@ -324,7 +324,7 @@ export default {
 }
 
 .carousel_img {
-  max-height: 15rem;
+  max-height: 10rem;
   object-fit: contain;
 }
 
