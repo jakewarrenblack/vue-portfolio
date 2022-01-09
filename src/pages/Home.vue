@@ -301,9 +301,6 @@ export default {
   padding:0;
 }
 
-.card{
-  padding:0;
-}
 
 .carousel-slide{
   display:flex!important;
@@ -323,6 +320,7 @@ export default {
   font-size: 2.5rem;
   font-weight: 700;
   font-family: "Poppins";
+  margin-bottom:0;
 }
 
 .VueCarousel-slide {
@@ -357,10 +355,13 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   align-items: center;
   margin: 1rem;
 }
+
+
+
 
 .tag {
   padding: 1.5rem;
