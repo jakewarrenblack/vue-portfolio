@@ -28,7 +28,7 @@
   {
     "id": 3,
     "title": "PHP Shopping Site",
-    "description": "PHP Shopping Cart Application with CRUD, Search/Sort functionality, basket functionality, related products, email with PHPMailer, and Stripe-integrated checkout functionality.",
+    "description": "Shopping Cart Application with CRUD, Search/Sort, basket, related products, email with PHPMailer, and Stripe-integrated checkout.",
     "website": "",
     "tags": ["PHP", "MySQL", "Stripe"],
     "images": ["php-mysql.png"],
@@ -54,7 +54,7 @@
   {
     "id": 5,
     "title": "Flutter Cocktail Search",
-    "description": "Simple Flutter/Dart application which makes use of the cocktaildb API to allow the user to search for any cocktail ingredient (eg vodka, rum) and view a list of possible cocktails.",
+    "description": "Flutter/Dart application using cocktaildb API to allow search of any cocktail ingredient to view a list of possible cocktails.",
     "website": "",
     "tags": ["Flutter"],
     "images": ["flutter_logo.png"],
@@ -67,7 +67,7 @@
   {
     "id": 6,
     "title": "Android Cocktail Search",
-    "description": "Written in kotlin and designed to MVVM architecture. API calls using Retrofit and persistent local SQLite database using Room. Image loading with Glide/Picasso. Search for a cocktail for a list of possibilities.",
+    "description": "Written in kotlin, designed to MVVM architecture. API calls using Retrofit, local SQLite database. Search for a cocktail for a list of possibilities.",
     "website": "",
     "tags": ["Android", "Kotlin"],
     "images": ["kotlin_logo.png"],
